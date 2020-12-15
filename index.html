@@ -17,7 +17,10 @@ var n = x[i].localeCompare(x[i+1]);
 	else {
 		var next1 = x[i].concat(x[i+1]);
 		var next2 = x[i].concat(x[i+1]).concat([i+2]);
+		//This is dumb. Why would anyone do this
+		if (i > 1) {
 		var back1 = x[i-1].concat(x[i]);
+		}
 	switch(x[i]) {
 		
 		case "T" :
