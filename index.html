@@ -4,13 +4,92 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script>
-function translate(){
+function translate(s){
 s = " " + s + "  ";
 var arrayWord = s.toUpperCase();
 var x = arrayWord.split("");
 //dont remember why array length minus one but dont want to change
 for (var i = 0; i < x.length -1; i++) {
 var n = x[i].localeCompare(x[i+1]);
+	if (n == 0)
+	{}
+	else {
+		var next1 = x[i].valueOf() + x[i+1].valueOf()
+		var next2 = x[i].valueOf() + x[i+1].valueOf()+ x[i+1].valueOf()
+		var back1 = x[i-1].valueOf() + x[i].valueOf() 
+	switch(x[i]) {
+		
+		CASE "T" :
+		CASE "D" :{
+		if (next2.localeCompare("TIO") == 0)
+			x[i] = "6";
+			break;
+		}
+			else {
+			x[i] = "1";
+			}
+		CASE "N" :{
+			if (back1.localeCompare("3N") == 0) {
+			x[i] = "";
+			break;
+			}
+			else {
+			x[i] = "2";
+			}
+		}		
+		CASE "M" :{
+			x[i] = "3";
+			break;
+			
+		}
+		CASE "R" :{
+			x[i]="4";
+			break;
+		}
+		CASE "L" :{
+			x[i] = "5";
+			break;
+		}
+		CASE "S" :
+		CASE "G" :
+		CASE "C" :{
+			if (next1.localeCompare("SH") == 0 || next1.localeCompare("CH") == 0 || next1.localeCompare("GE") == 0 || next2.localeCompare("SIO") == 0 || next2.localeCompare("CIA") == 0 ) {
+			x[i] = "6";
+			break;
+			}
+			else if (next1.localeCompare("CQ") == 0 || next1.localeCompare("CE") == 0 || next1.localeCompare("CI") == 0 || x[i].localeCompare("S") == 0) {
+			x[i] = "O";
+				break;
+			}
+			else if (next1.localeCompare("CK") == 0 || next1.localeCompare("GH") == 0 || next1.localeCompare("GN") == 0) {
+			x[i] = "";
+				break;
+			}
+			else {
+			x[i] =	"7";
+				break;
+			}
+			
+		}
+		CASE "J" :{
+			x[i] = "6";
+			break;	
+		}
+			CASE "X" :{
+			
+		}
+		CASE "Z" :
+		CASE "X" :{
+			
+		}
+		
+		
+			
+			
+	}
+	
+	
+	}
   console.log(n);
 
 }
