@@ -15,9 +15,9 @@ var n = x[i].localeCompare(x[i+1]);
 	if (n == 0)
 	{}
 	else {
-		var next1 = x[i].valueOf() + x[i+1].valueOf()
-		var next2 = x[i].valueOf() + x[i+1].valueOf()+ x[i+1].valueOf()
-		var back1 = x[i-1].valueOf() + x[i].valueOf() 
+		var next1 = x[i].concat(x[i+1]);
+		var next2 = x[i].concat(x[i+1]).concat([i+2]);
+		var back1 = x[i-1].concat([i]);
 	switch(x[i]) {
 		
 		case "T" :
