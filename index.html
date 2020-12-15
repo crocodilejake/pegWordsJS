@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script>
 function translate(s){
+	  console.log(s);
 s = " " + s + "  ";
 var arrayWord = s.toUpperCase();
 var x = arrayWord.split("");
@@ -75,20 +76,54 @@ var n = x[i].localeCompare(x[i+1]);
 			x[i] = "6";
 			break;	
 		}
-			CASE "X" :{
+		CASE "K" :
+		CASE "Q" :{
+			if (next1.localeCompare("KN") == 0) {
+x[i] = "";
+				break;
+			}
+			else {
+			x[i] = "7";	
+			}
+			
+		}
+		CASE "F" :
+		CASE "V" :{
+			x[i] = "8";
+			break;
+		}
+		CASE "B" :
+		CASE "P	" :{
+			if (next1.localeCompare("BT") == 0 || next1.localeCompare("PT") == 0 || next1.localeCompare("PN") == 0 || next1.localeCompare("PS") == 0) {
+			x[i] = "";
+				break;
+			}
+			else if (next1.localeCompare("PH") == 0) {
+			x[i] = "8";
+				break;
+			}
+			else {
+			x[i] = "9";
+				break;
+			}
 			
 		}
 		CASE "Z" :
 		CASE "X" :{
-			
+			x[i] = "O";
+			break;
 		}
-		
-		
-			
-			
+		default: {
+		x[i] = "";
+		break;
+		}
+
 	}
-	
-	
+var output = ""
+for (int i = 0; i < x.length; i++){
+            output += x[i];
+	  console.log(output);
+}
 	}
   console.log(n);
 
