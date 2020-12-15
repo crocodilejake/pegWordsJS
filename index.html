@@ -20,8 +20,8 @@ var n = x[i].localeCompare(x[i+1]);
 		var back1 = x[i-1].valueOf() + x[i].valueOf() 
 	switch(x[i]) {
 		
-		CASE "T" :
-		CASE "D" :{
+		case "T" :
+		case "D" :{
 		if (next2.localeCompare("TIO") == 0)
 			x[i] = "6";
 			break;
@@ -29,7 +29,7 @@ var n = x[i].localeCompare(x[i+1]);
 			else {
 			x[i] = "1";
 			}
-		CASE "N" :{
+		case "N" :{
 			if (back1.localeCompare("3N") == 0) {
 			x[i] = "";
 			break;
@@ -38,22 +38,22 @@ var n = x[i].localeCompare(x[i+1]);
 			x[i] = "2";
 			}
 		}		
-		CASE "M" :{
+		case "M" :{
 			x[i] = "3";
 			break;
 			
 		}
-		CASE "R" :{
+		case "R" :{
 			x[i]="4";
 			break;
 		}
-		CASE "L" :{
+		case "L" :{
 			x[i] = "5";
 			break;
 		}
-		CASE "S" :
-		CASE "G" :
-		CASE "C" :{
+		case "S" :
+		case "G" :
+		case "C" :{
 			if (next1.localeCompare("SH") == 0 || next1.localeCompare("CH") == 0 || next1.localeCompare("GE") == 0 || next2.localeCompare("SIO") == 0 || next2.localeCompare("CIA") == 0 ) {
 			x[i] = "6";
 			break;
@@ -72,12 +72,12 @@ var n = x[i].localeCompare(x[i+1]);
 			}
 			
 		}
-		CASE "J" :{
+		case "J" :{
 			x[i] = "6";
 			break;	
 		}
-		CASE "K" :
-		CASE "Q" :{
+		case "K" :
+		case "Q" :{
 			if (next1.localeCompare("KN") == 0) {
 x[i] = "";
 				break;
@@ -87,13 +87,13 @@ x[i] = "";
 			}
 			
 		}
-		CASE "F" :
-		CASE "V" :{
+		case "F" :
+		case "V" :{
 			x[i] = "8";
 			break;
 		}
-		CASE "B" :
-		CASE "P	" :{
+		case "B" :
+		case "P	" :{
 			if (next1.localeCompare("BT") == 0 || next1.localeCompare("PT") == 0 || next1.localeCompare("PN") == 0 || next1.localeCompare("PS") == 0) {
 			x[i] = "";
 				break;
@@ -108,8 +108,8 @@ x[i] = "";
 			}
 			
 		}
-		CASE "Z" :
-		CASE "X" :{
+		case "Z" :
+		case "X" :{
 			x[i] = "O";
 			break;
 		}
