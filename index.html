@@ -7,139 +7,139 @@
 function translate(s){
 s = " " + s + "  ";
 x = s.toUpperCase();
-var arrayWord = US.split(““);
+var arrayWord = US.split("");
 //dont remember why array length minus one but dont want to change
 for (var i = 0; i < x.length -1; i++) {
-      
+
             if (String.valueOf(x[i]).equals(String.valueOf(x[i+1])))
-            {x[i] = “ “;}
+            {x[i] = " ";}
             else {
-            
+
             switch (x[i]) {
-            case “T”:
-            case “D”: {
+            case 'T':
+            case 'D': {
                 var tio = String.valueOf(x[i]) +  String.valueOf(x[i+1]) + String.valueOf(x[i+2]);
                 if (tio.equals("TIO")){
-                    x[i] = “6”;
+                    x[i] = '6';
                     break;
                 }
                 else {
-                
-                x[i] = “1”;
+
+                x[i] = '1';
                 break;
                 }
             }
- 
-            case “N”: {
+
+            case 'N': {
                 var mn = String.valueOf(x[i-1]) + String.valueOf(x[i]);
-           
+
                 if (mn.equals("3N")) {
-                x[i] = “ “;
+                x[i] = ' ';
                 break;
                 }
                 else {
-                x[i] = “2”;
+                x[i] = '2';
                 break;
                 }
             }
-            
-            case "M”: {
-                x[i] = “3”;
+
+            case 'M': {
+                x[i] = '3';
                 break;
             }
- 
-            case “R”: {
-                x[i] = “4”;
+
+            case 'R': {
+                x[i] = '4';
                 break;
             }
- 
-            case “L”: {
-                x[i] = “5”;
+
+            case 'L': {
+                x[i] = '5';
                 break;
             }
- 
-            case “S”:
-            case “C”:
-            case “G”:{
-                String sh = String.valueOf(x[i]) + String.valueOf(x[i+1]);   
-                String sio = String.valueOf(x[i]) + String.valueOf(x[i+1])+ String.valueOf(x[i+2]); 
+
+            case 'S':
+            case 'C':
+            case 'G':{
+                var sh = String.valueOf(x[i]) + String.valueOf(x[i+1]);   
+                var sio = String.valueOf(x[i]) + String.valueOf(x[i+1])+ String.valueOf(x[i+2]); 
                 if (
                   //Shhhhhhh sound
                 sh.equals("SH") || sh.equals("CH") || sh.equals("GE") || sio.equals("SIO") || sio.equals("CIA"))
-       
-                {x[i] = “6”;
+
+                {x[i] = '6';
                 break;}
-                
+
                 //Snake hissing sound
-             
-                else if ( sh.equals("CQ")  || x[i]==“S” ||  sh.equals("CE") || sh.equals("CI"))
-                {x[i] = “O”;
+
+                else if ( sh.equals("CQ")  || x[i]=='S' ||  sh.equals("CE") || sh.equals("CI"))
+                {x[i] = 'O';
                 break;
                 }
                 else if (sh.equals("CK") ||sh.equals("GH") || sh.equals("GN"))
                 {
-                x[i] = “ “;
+                x[i] = ' ';
                 break;
                 }
-                              
-                else {x[i] = “7”;
+
+                else {x[i] = '7';
                 break;}
                 // Que sound
-      
 
-                
+
+
             }
-            case “J”:{
-                x[i] = “6”;
+            case 'J':{
+                x[i] = '6';
                 break;
             }
-            case “K”:
-            case “Q”:{
-                String kn = String.valueOf(x[i]) + String.valueOf(x[i+1]);   
+            case 'K':
+            case 'Q':{
+                var kn = String.valueOf(x[i]) + String.valueOf(x[i+1]);   
                 if (kn.equals("KN"))
                 {
-                    x[i] = “ “;
+                    x[i] = ' ';
                 break;
                 }
                 else {
-                x[i] = “7”;
+                x[i] = '7';
                 break;
                 }
             }
-            case “F”:
-            case “V”:{
-                x[i] = “8”;
+            case 'F':
+            case 'V':{
+                x[i] = '8';
                 break;
             }
-            case “B”:
-            case “P”: {
+            case 'B':
+            case 'P': {
                 var mb = String.valueOf(x[i-1] + String.valueOf(x[i]));
                 var ph = String.valueOf(x[i]) + String.valueOf(x[i+1]);
                 if (mb.equals("3B") && ph != "") {
-                x[i] = “ “;
+                x[i] = ' ';
                 break;
                 }
                 else if (ph.equals("BT") || ph.equals("PT") || ph.equals("PN") ||ph.equals("PS")) {
-                 x[i] = “ “;
+                 x[i] = ' ';
                 break;
                 }
                 else if (ph.equals("PH")) {
-                  x[i] = “8”;
+                  x[i] = '8';
                 break;   
                 }  
                 else {
-                x[i] = “9”;
+                x[i] = '9';
                 break;
                         }
             }
-            
-            case “Z”:
-            case “X”:    
-                x[i] = “O”;
+
+            case 'Z':
+            case 'X':    
+                x[i] = 'O';
                 break;
-                
+
             default: {
-                x[i] = “ “;
+                x[i] = ' ';
                 break;
             }
             }
@@ -157,15 +157,15 @@ console.log(output);
 
 	</script>
 	<div class="topStuff">
-		
+
 
 	</div>	
-	
+
 <div class="headline">
 
 	<h1>Placeholder Title</h1>
 </div>
-	
+
 
 </nav>
 </div class="navBar" align="left">
